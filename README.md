@@ -80,6 +80,26 @@ Ensure that you are logged in before accessing the following endpoints:
 - **Params**: 
   - `page`: (Optional) Navigate to a specific page of books.
   - `per_page`: (Optional) Set the number of books to display per page.
+- **Response Structure**:
+```
+{
+  "data": [
+    {
+      "id": 20,
+      "title": "Tinta",
+      "year": 1111,
+      "author_id": 2,
+      "created_at": "2024-10-01T11:24:21.720Z",
+      "updated_at": "2024-10-01T11:24:21.720Z",
+      "author": {
+        "id": 2,
+        "name": "abdulsalam121196@gmail.com",
+        "created_at": "2024-10-01T10:43:12.396Z"
+      }
+    }
+  ]
+}
+```
 
 ### Web URLs:
 - **Login**: `/auth/login`
