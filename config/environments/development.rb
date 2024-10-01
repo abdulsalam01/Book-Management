@@ -81,11 +81,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              "mail.tveloper.id",
-    port:                 465,
-    domain:               "tveloper.id",
-    user_name:            "info@tveloper.id",
-    password:             "SegQ2k&$3Dch",
+    address:              "smtp.gmail.com", # Your SMTP server
+    port:                 587, # The port of SMTP
+    domain:               "your_domain.com", # Your domain or a placeholder like 'example.com'
+    user_name:            "your_email@mail.com", # Your email address
+    password:             "your_app_password", # Your email password or app password if 2FA is enabled
     authentication:       "plain",
     enable_starttls_auto: true
   }
