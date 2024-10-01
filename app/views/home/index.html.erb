@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= content_for(:title) || "Book Mgmt" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= yield :head %>
-
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body>
-    <h1>Welcome Home, <%= current_user.email %></h1>
-    <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete } %>
-  </body>
-</html>
+<div class="container px-5 py-5">
+  <div class="flex">
+    <a href="/books">
+      <div class="bg-primary-700 rounded-lg shadow-lg p-6 w-80">
+        <h2 class="text-2xl text-white font-bold mb-4">Total Books</h2>
+        <p class="text-4xl font-semibold mb-2 text-white">
+          <%= @total_books %>
+        </p>
+        <small class="text-white mt-4">
+          <%= Date.today.strftime("%B %d, %Y") %>
+        </small>
+      </div>
+    </a>
+  </div>
+</div>

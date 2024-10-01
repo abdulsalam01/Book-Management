@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    render
+    @total_books = Book.count
   end
 end
