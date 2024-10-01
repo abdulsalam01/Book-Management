@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @total_books = Book.count
+    author_ids = current_user.authors.pluck(:id)
+    
+    @total_books = Book.where(author_id: author_ids).count
   end
 end
