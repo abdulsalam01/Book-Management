@@ -88,8 +88,6 @@ Ensure that you are logged in before accessing the following endpoints:
 
 - **Logout**: `/auth/logout`
 
-![Logout Page](assets/logout.png)
-
 - **Sign Up**: `/auth/sign_up`
 
 ![Sign Up Page](assets/register.png)
@@ -109,6 +107,8 @@ Ensure that you are logged in before accessing the following endpoints:
 - **Create New Book**: `/books/new`
 
 ![Dashboard Book Create](assets/dashboard_book_create.png)
+
+- **Sidekiq Monitoring**: `/sidekiq`
 
 ## Running Tests
 
