@@ -1,0 +1,13 @@
+<div>
+    <h1 style="font-size: 24px; color: #333; text-align: center;">New Book Created!</h1>
+    <p style="font-size: 16px; color: #555;">Dear <%= @user.email %>,</p>
+    <p style="font-size: 16px; color: #555;">You have successfully created a new book:</p>
+
+    <h2 style="font-size: 20px; color: #007BFF; text-align: center;"><%= @book.title %></h2>
+    <p style="font-size: 16px; color: #555;">Year: <strong><%= @book.year %></strong></p>
+    <p style="font-size: 16px; color: #555;">Thank you for using our application!</p>
+
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="http://localhost:3000" style="padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">View Your Books</a>
+    </div>
+</div>

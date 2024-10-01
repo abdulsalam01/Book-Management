@@ -1,0 +1,29 @@
+<header class="bg-white shadow">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="text-xl font-bold text-gray-700">
+      <%= link_to 'Book Management', '/' %>
+    </div>
+
+    <nav class="flex items-center space-x-4">
+      <div class="relative" data-controller="dropdown">
+        <button 
+          data-action="click->dropdown#toggle" 
+          data-dropdown-target="button" 
+          class="flex items-center focus:outline-none">
+          <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-10 h-10 rounded-full">
+          <span class="ml-2 text-gray-800"><%= current_user.email %></span>
+        </button>
+        <div 
+          data-dropdown-target="menu" 
+          class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden">
+          <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
+            <%= link_to 'Book List', '/books', class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+          </div>
+          <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: "block px-4 py-2 text-sm text-red-700 hover:bg-gray-100" %>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
